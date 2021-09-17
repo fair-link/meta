@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx, color}
+\usepackage{fixltx2e}
+\usepackage{booktabs}
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage{float}
+\usepackage[hyphens]{url}
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{black}}
+
+
+% Package of algorithms
+\usepackage[english,ruled,lined]{algorithm2e}
+
+% English Encoding
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+
+% Header
+\usepackage{fancyhdr}
+
+% Footer
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[CE,CO]{\thepage}
+
+% Removes identiation at the beggining of paragraphs
+\newcommand{\blank}[1]{\hspace*{#1}\linebreak[0]}
+
+% Section and Subsection spacing:
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{remreset}
+
+\makeatletter
+  \renewcommand \thesection {\@arabic\c@section}
+  \@removefromreset{section}{chapter}
+\makeatother
+
+
+% Uses files for input
+\usepackage{subfiles}
+
+% Enables blank pages with \afterpage{\blankpage}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
+
+% Supports bibliography
+\usepackage{cite}
+
+% for paragraphs being used as subsubsubsections 
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{listings}
+
+% For tabs in showing json
+\usepackage{fancyvrb}
+
+% For page numbering
+\pagenumbering{roman}
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\subfile{capa}
+
+\subfile{historico-revisoes}
+\subfile{indice}
+\subfile{introducao}
+\subfile{posicionamento}
+\subfile{participantes}
+\subfile{solucao}
+\subfile{outros}
+
+\end{document}
