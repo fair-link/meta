@@ -133,6 +133,7 @@ hs_err_pid*
 *.pdf
 !I-On_Integration.pdf
 !cartazG04.pdf
+!especificacao_requisitos.pdf
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
 *.bcf
